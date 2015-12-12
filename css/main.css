@@ -1,0 +1,377 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+@import url(https://fonts.googleapis.com/css?family=Dosis:400,300);
+body {
+    font-family: "MS PGothic","Osaka",Arial,sans-serif;
+
+}
+
+p{
+    color:#474646;
+    line-height:1.4em;
+}
+
+/* -------Common class-----*/
+
+/*箱の幅にpaddingとborderの幅の分を含める*/
+div,header,nav,ul,li,a,main,section,article,aside,h1,h2,h3,h4,h5,h6,p {
+box-sizing:border-box;
+}
+
+/* clearfix */
+.clearfix:after{
+display:block;	
+content:'';
+width:100%;
+height:0;
+clear:both;
+visibility:hidden;
+}
+
+/* clear */
+.clear {
+clear:both;
+}
+
+/*存在させるけど非表示*/
+.invisible {
+visibility: hidden;
+}
+
+.align-right {
+text-align:right;
+}
+
+.align-left {
+text-align:left;
+}
+
+.align-center {
+text-align:center;
+}
+
+/* ↑-------Common class-----　*/
+
+
+/* Layout */
+/*
+大外のcontainerの中の箱の横幅は全部相対値（%）にしていますので
+大外の横幅変えるだけで全体の横幅が調節できます
+*/
+body {
+background-image:url(../img/paper.png);
+background-attachment:fixed;
+}
+
+.container {
+width:960px;
+margin:40px auto 0 auto;
+
+}
+
+.main_header {
+height:500px;
+/*
+background-image:url(../img/bg1.jpg);
+background-repeat:no-repeat;
+background-size:contain;
+background-attachment:fixed;
+background-position:center top;
+*/
+border-top-right-radius:20px;
+}
+
+footer {
+margin-bottom: 50px;
+position:relative;
+background-image:url(../img/cloth.png);
+}
+
+
+
+
+/*上部ロゴ*/
+.logo {
+width:320px;
+height: 80px;
+float: left;
+margin-bottom: 10px;
+color:#000;
+padding-top:2px;
+background-image:url(../img/cloth.png);
+text-align:center;
+font-size:2.8rem;
+line-height:60px;
+font-family: 'Indie Flower', cursive;
+border:5px solid rgb(209,74,20);	
+transform:rotate(-8deg);
+position:relative;
+left:-35px;
+top:20px;
+}
+
+.logo:after {
+content:'';
+display:block;
+width:324px;
+height: 85px;
+position:absolute;
+top:-9px;
+left:-9px;
+border:2px solid rgb(209,74,20);
+}
+
+.logo:hover {
+background-color: #FF795B;
+transition:0.5s linear;	
+}
+
+/* ユーティリティナビゲーションメニュー*/
+.utility_nav  {
+display: inline-block;
+float:right;
+margin-top: 30px;
+
+font-size:1.2rem;
+	
+}
+.utility_nav li {
+display: inline-block;
+margin-left: 10px;	
+}
+.utility_nav a{
+text-decoration: none;
+color:#F7FDFF;
+font-family: 'Indie Flower', cursive;	
+}
+
+.utility_nav a:hover {
+text-decoration: underline;
+background-color:#FF795B;
+}
+
+
+/* メインナビゲーションメニュー*/
+.main_nav {
+height:40px;
+}
+
+
+
+.main_nav a {
+display:block;
+list-style-type:none;
+float:left;
+line-height:40px;
+text-align:center;
+text-decoration:none;
+background-color:rgb(209,74,20);
+color:#fff;
+width:calc(100% / 6);
+width:-moz-calc(100% / 6);
+width:-webkit-calc(100% / 6);
+font-family: 'Indie Flower', cursive;
+font-size:1.3rem;
+}
+
+
+
+.main_nav li:first-child a {
+border-bottom-left-radius:10px;
+}
+
+.main_nav li:last-child a {
+border-bottom-right-radius:10px;
+}
+
+
+.main_nav a:hover {
+background-color: #FF795B;
+color:#fff;	
+transition:0.5s linear;
+}
+
+/* メインコンテンツエリア　*/
+.gloval_main .contents {
+width:70%;
+float:left;
+}
+
+.gloval_main .contents .content_sentence {
+width:calc(100% - 20px);
+width:-moz-calc(100% - 20px);
+width:-webkit-calc(100% - 20px);
+margin:10px;	
+min-height:200px;
+padding:40px;
+-webkit-box-shadow: inset 2px 6px 12px 0px rgba(21, 23, 25, 0.75);
+-moz-box-shadow:    inset 2px 6px 12px 0px rgba(21, 23, 25, 0.75);
+box-shadow:         inset 2px 6px 12px 0px rgba(21, 23, 25, 0.75);
+border-radius:10px;
+text-align:center;
+}
+
+.content_fullwidth {
+margin:20px 0;
+padding:10px;
+}
+
+.content_fullwidth ul li {
+width:calc((100% - 80px) / 4);
+width:-moz-calc((100% - 80px) / 4);
+width:-webkit-calc((100% - 80px) / 4);
+min-height:300px;
+margin:10px;
+padding:10px;
+float:left;
+-webkit-box-shadow: inset 2px 6px 12px 0px rgba(21, 23, 25, 0.75);
+-moz-box-shadow:    inset 2px 6px 12px 0px rgba(21, 23, 25, 0.75);
+box-shadow:         inset 2px 6px 12px 0px rgba(21, 23, 25, 0.75);
+background-color:rgba(255,255,255,0.5);
+}
+
+.content_sentence_fullwidth {
+min-height:400px;
+margin:10px;
+-webkit-box-shadow: inset 2px 6px 12px 0px rgba(21, 23, 25, 0.75);
+-moz-box-shadow:    inset 2px 6px 12px 0px rgba(21, 23, 25, 0.75);
+box-shadow:         inset 2px 6px 12px 0px rgba(21, 23, 25, 0.75);
+border-radius:40px;
+}
+
+/* サイドメニューエリア　*/
+.gloval_main .sidemenu {
+width:30%;
+float:left;
+
+}
+
+.gloval_main .sidemenu .widget {
+width:calc(100% - 20px);
+width:-moz-calc(100% - 20px);
+width:-webkit-calc(100% - 20px);
+min-height:50px;
+/*background-image:url(../img/cloth.png);*/
+margin:10px;
+
+}
+/*---footer containts area----*/
+.footer_widget {
+width:calc(100% / 3 - 20px);
+width:-moz-calc(100% / 3 - 20px);
+width:-webkit-calc(100% / 3 - 20px);
+min-height:200px;
+float:left;
+margin:20px 10px;
+}
+
+.footer_widget:nth-child(-n+2){
+border-right:2px dotted #000;
+
+}
+
+.footer_widget:nth-child(-n+3) {
+padding:20px;
+}
+/*--words_assets--*/
+
+.content_title {
+display:inline-block;
+padding:5px 10px;
+font-size:2.4rem;
+margin:0 0 40px 0;
+text-align:center;
+font-family: "Indie Flower","游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+color: #000;
+border-top:4px solid #06A5AA;
+border-bottom:4px solid #06A5AA;
+}
+
+.contnt_sub_title {
+text-align:center;
+margin-bottom:20px;
+font-size:2.4rem;
+}
+
+
+
+
+.content_detail {
+line-height:1.8em;
+font-size:1rem;
+font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+text-align:left;
+}
+
+.main_header h2 {
+display:inline-block;
+font-size:2rem;
+padding:5px 10px;
+margin:100px auto 0 auto;
+color:rgba(255,255,255,1);
+font-family: 'Dosis', sans-serif;
+/*text-shadow: 0px 1px 7px rgba(0, 0, 0, 1);*/
+background-color:#000;
+}
+
+/*--image_assets--*/
+.img_left{
+float:left;
+margin:0 10px 10px 0;
+
+}
+
+.img_right{
+float:right;
+margin:0 0 10px 10px;
+
+}
+
+/*-----single posts-----*/
+.single_link {
+color:#000;
+}
+
+/*--------category archive fix-------------*/
+.category .logo,.page .logo,.single .logo {
+transform:none;
+top:0;
+left:0;
+
+}
+
+.category .main_nav ul li:first-child a,
+.page-id-40 .main_nav ul li:first-child a,
+.page-id-43 .main_nav ul li:first-child a,
+.single .main_nav ul li:first-child a
+ {
+border-bottom-left-radius:0;
+}
+
+.category .main_nav ul li:last-child a,
+.page-id-40 .main_nav ul li:last-child a,
+.page-id-43 .main_nav ul li:last-child a,
+.single .main_nav ul li:last-child a
+ {
+border-bottom-right-radius:0;
+} 
+
+/*--------single fix-------------*/
+
+.single .gloval_main .contents .content_sentence {
+min-height:800px;
+}
+
+/*--------新着記事-------------*/
+.new_post_title {
+font-size:0.9rem;
+text-align:center;
+padding:5px
+}
+
+/*----------toppage 固定ページから編集ページ-----------*/
+.content_fullwidth:nth-of-type(2) .content_sentence_fullwidth{
+padding:40px;
+}
+
